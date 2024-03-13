@@ -1,4 +1,4 @@
-<p align="center"><a href="https://github.com/mikadojnr/Laravel-10-g4mart-ecommerce"><img src="{{ asset('assets/images/logo.png') }}" width="400" alt="G4 Mart Logo"></a></p>
+<p align="center"><a href="https://github.com/mikadojnr/Laravel-10-g4mart-ecommerce"><img src="public/assets/images/logo.png" width="400" alt="G4 Mart Logo"></a></p>
 
 # G4 Mart Software Documentation
 
