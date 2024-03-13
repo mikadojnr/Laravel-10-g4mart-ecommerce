@@ -1,66 +1,156 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://github.com/mikadojnr/Laravel-10-g4mart-ecommerce"><img src="{{ asset('assets/images/logo.png') }}" width="400" alt="G4 Mart Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# G4 Mart Software Documentation
 
-## About Laravel
+## 1. Introduction
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Welcome to G4 Mart, your go-to ecommerce solution that enables seamless customer login and purchasing of goods. This documentation provides an overview of the software's purpose, key features, and benefits.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Purpose and Scope
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+G4 Mart aims to provide a user-friendly ecommerce platform, allowing customers to authenticate, browse products, add items to a cart, and make purchases with various payment options.
 
-## Learning Laravel
+### Key Features and Benefits
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+**Key Features:**
+- User Authentication
+- Admin Order Tracking
+- Cart System
+- Payment Integration (Cash on Delivery, Card)
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+**Benefits:**
+- Seamless customer purchasing experience
+- Increased operational efficiency
+- Improved user experience
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 2. System Architecture
 
-## Laravel Sponsors
+G4 Mart is built on the Laravel 10 architecture, ensuring a robust and scalable foundation for ecommerce functionalities.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+![System Architecture Diagram](link_to_diagram_image)
 
-### Premium Partners
+## 3. Installation
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### System Requirements
 
-## Contributing
+Before proceeding with the installation, ensure that your system meets the following requirements:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- PHP >= 7.4
+- Composer installed
+- Laravel 10 requirements met
 
-## Code of Conduct
+### Installation Steps
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mikadojnr/Laravel-10-g4mart-ecommerce.git
+   ```
 
-## Security Vulnerabilities
+2. Change directory to the project folder:
+   ```bash
+   cd Laravel-10-g4mart-ecommerce
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+3. Install dependencies:
+   ```bash
+   composer install
+   ```
 
-## License
+4. Copy the `.env.example` file to `.env` and configure the database settings:
+   ```bash
+   cp .env.example .env
+   ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+   Edit the `.env` file with your database details:
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=g4mart
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
+
+5. Generate application key:
+   ```bash
+   php artisan key:generate
+   ```
+
+6. Run database migrations and seed:
+   ```bash
+   php artisan migrate --seed
+   ```
+
+7. Start the development server:
+   ```bash
+   php artisan serve
+   ```
+
+   Your G4 Mart application should now be accessible at `http://localhost:8000`.
+
+## 4. Getting Started
+
+### Quick Start Guide
+
+To quickly start using G4 Mart:
+
+1. Open your web browser.
+2. Navigate to `http://localhost:8000`.
+3. Register for a new account or log in if you already have one.
+4. Browse products, add items to your cart, and proceed to checkout.
+5. Choose your preferred payment option and complete the purchase.
+
+### Basic Usage Examples
+
+- Logging in as a customer.
+- Adding products to the cart.
+- Viewing and updating the cart contents.
+
+## 5. User Guide
+
+Detailed instructions for using each feature of G4 Mart will be provided in subsequent sections.
+
+## 6. Configuration
+
+G4 Mart allows customization of certain settings. To customize:
+
+1. Open the `.env` file.
+2. Adjust configuration variables to meet your requirements.
+
+## 7. Troubleshooting
+
+### Common Issues and Solutions
+
+- **Issue:** Laravel migrations fail.
+  **Solution:** Check database credentials in `.env` and ensure proper setup.
+
+### Support
+
+For further assistance or inquiries, please contact our support team at [officialudobad@gmail.com](mailto:officialudobad@gmail.com).
+
+## 8. API Documentation
+
+Currently, G4 Mart does not expose any external APIs.
+
+## 9. Release Notes
+
+### Version 1.0.0
+
+- Initial release.
+- Core features implemented.
+- User authentication, cart system, and payment integration introduced.
+
+## 10. Maintenance
+
+For updates, patches, and maintenance tasks, regularly check the official repository at [https://github.com/mikadojnr/Laravel-10-g4mart-ecommerce.git](https://github.com/mikadojnr/Laravel-10-g4mart-ecommerce).
+
+## 11. Glossary
+
+- **Laravel 10:** A powerful PHP framework used for building web applications.
+- **Composer:** A dependency manager for PHP.
+- **.env:** Environment configuration file used in Laravel.
+- **Migration:** A Laravel feature for database schema modification.
+
+Thank you for choosing G4 Mart! We hope you enjoy a seamless ecommerce experience.
+```
+
